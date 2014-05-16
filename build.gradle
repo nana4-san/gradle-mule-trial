@@ -1,0 +1,17 @@
+buildscript {
+    dependencies {
+        List mule = ["org.mulesoft.build:mule-gradle-plugin:1.0.0-SNAPSHOT"]
+        classpath mule
+    }
+
+    repositories {
+        mavenLocal()
+    }
+}
+
+apply plugin: 'mule'
+
+mule.version = '3.4.0'
+mule.muleEnterprise = false
+
+//mule.installPath = 'C:/usr/local/bin/mule/3.4/'

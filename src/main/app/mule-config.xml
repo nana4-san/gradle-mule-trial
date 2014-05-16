@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule
+    xmlns="http://www.mulesoft.org/schema/mule/core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:spring="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="
+    http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <spring:beans>
+        <spring:import resource="classpath:/META-INF/spring/context.xml"/>
+    </spring:beans>
+
+    <spring:beans>
+        <!-- 個別定義（以下に複数定義が並ぶ） -->
+        <spring:import resource="classpath:/META-INF/mule/app/gradle-mule.xml"/>
+    </spring:beans>
+</mule>
